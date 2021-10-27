@@ -1,0 +1,33 @@
+body{
+  background-color: #05052d;
+}
+
+.spinner{
+  height: 400px;
+  width: 400px;
+  position: relative;
+  top: 100px;
+  left: 36%;
+  border-radius: 100%;
+  border-top: 10px solid red;
+  border-bottom: 10px solid yellow;
+  
+  
+  animation: spin 2s linear infinite;
+}
+
+.spinner::before{
+  content: "";
+  height: 400px;
+  width: 400px;
+  border-radius: 100%;
+  border-left: 10px solid blue;
+  border-right: 10px solid darkorange;
+  position: absolute;
+  left: -10px;
+}
+
+@keyframes spin {
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(360deg);}
+}
